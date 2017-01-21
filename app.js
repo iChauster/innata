@@ -11,8 +11,8 @@ var bodyParser = require('body-parser');
 var request = require('superagent');
 var routes = require('./routes/index');
 var users = require('./routes/users');
- var apiKey = "afa1d15ae07d23d7b3c4e6443cabbf7d";
-
+var apiKey = "afa1d15ae07d23d7b3c4e6443cabbf7d";
+        
 
 server.listen(8080);
 
