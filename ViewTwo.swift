@@ -41,6 +41,7 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     override func  viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         prelay?.frame = cam.bounds
+        cam.isHidden = false;
     }
     
     override func viewWillAppear(_ animated: Bool) {

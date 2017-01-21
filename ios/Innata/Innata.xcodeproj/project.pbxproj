@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C1070BB1E32FFA0006CD7FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1070BA1E32FFA0006CD7FE /* AppDelegate.swift */; };
+		2C1070BD1E32FFA0006CD7FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1070BC1E32FFA0006CD7FE /* ViewController.swift */; };
+		2C1070C01E32FFA0006CD7FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C1070BE1E32FFA0006CD7FE /* Main.storyboard */; };
+		2C1070C21E32FFA0006CD7FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C1070C11E32FFA0006CD7FE /* Assets.xcassets */; };
+		2C1070C51E32FFA0006CD7FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C1070C31E32FFA0006CD7FE /* LaunchScreen.storyboard */; };
+		2C1070D01E32FFA0006CD7FE /* InnataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1070CF1E32FFA0006CD7FE /* InnataTests.swift */; };
+		2C1070DB1E32FFA0006CD7FE /* InnataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1070DA1E32FFA0006CD7FE /* InnataUITests.swift */; };
+		2C1070EC1E3300F6006CD7FE /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1070EB1E3300F6006CD7FE /* libstdc++.tbd */; };
+		2C1070EE1E330102006CD7FE /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1070ED1E330102006CD7FE /* CoreImage.framework */; };
+		2C1070F31E330286006CD7FE /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1070F21E330286006CD7FE /* TesseractOCR.framework */; };
+
+        877CA7441E331EBF00E14DA9 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877CA7431E331EBF00E14DA9 /* Charts.framework */; };
+		2C9B5B041E3315D700D7F659 /* ViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B5B021E3315D700D7F659 /* ViewOne.swift */; };
+		2C9B5B051E3315D700D7F659 /* ViewOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9B5B031E3315D700D7F659 /* ViewOne.xib */; };
+		2C9B5B081E331ABF00D7F659 /* ViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B5B061E331ABF00D7F659 /* ViewTwo.swift */; };
+		2C9B5B091E331ABF00D7F659 /* ViewTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9B5B071E331ABF00D7F659 /* ViewTwo.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C1070CC1E32FFA0006CD7FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C1070AF1E32FFA0006CD7FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C1070B61E32FFA0006CD7FE;
+			remoteInfo = Innata;
+		};
+		2C1070D71E32FFA0006CD7FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C1070AF1E32FFA0006CD7FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C1070B61E32FFA0006CD7FE;
+			remoteInfo = Innata;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C1070B71E32FFA0006CD7FE /* Innata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Innata.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C1070BA1E32FFA0006CD7FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2C1070BC1E32FFA0006CD7FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C1070BF1E32FFA0006CD7FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C1070C11E32FFA0006CD7FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C1070C41E32FFA0006CD7FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C1070C61E32FFA0006CD7FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C1070CB1E32FFA0006CD7FE /* InnataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InnataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C1070CF1E32FFA0006CD7FE /* InnataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnataTests.swift; sourceTree = "<group>"; };
+		2C1070D11E32FFA0006CD7FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C1070D61E32FFA0006CD7FE /* InnataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InnataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C1070DA1E32FFA0006CD7FE /* InnataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnataUITests.swift; sourceTree = "<group>"; };
+		2C1070DC1E32FFA0006CD7FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C1070EB1E3300F6006CD7FE /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		2C1070ED1E330102006CD7FE /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		2C1070EF1E330217006CD7FE /* Innata-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Innata-Bridging-Header.h"; sourceTree = "<group>"; };
+		2C1070F21E330286006CD7FE /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = "<group>"; };
+
+		877CA7431E331EBF00E14DA9 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../Charts-master/build/Debug/Charts.framework"; sourceTree = "<group>"; };
+
+		2C9B5B021E3315D700D7F659 /* ViewOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewOne.swift; sourceTree = "<group>"; };
+		2C9B5B031E3315D700D7F659 /* ViewOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewOne.xib; sourceTree = "<group>"; };
+		2C9B5B061E331ABF00D7F659 /* ViewTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTwo.swift; sourceTree = "<group>"; };
+		2C9B5B071E331ABF00D7F659 /* ViewTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewTwo.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C1070B41E32FFA0006CD7FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877CA7441E331EBF00E14DA9 /* Charts.framework in Frameworks */,
+				2C1070EE1E330102006CD7FE /* CoreImage.framework in Frameworks */,
+				2C1070F31E330286006CD7FE /* TesseractOCR.framework in Frameworks */,
+				2C1070EC1E3300F6006CD7FE /* libstdc++.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C1070C81E32FFA0006CD7FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C1070D31E32FFA0006CD7FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C1070AE1E32FFA0006CD7FE = {
+			isa = PBXGroup;
+			children = (
+				2C1070B91E32FFA0006CD7FE /* Innata */,
+				2C1070CE1E32FFA0006CD7FE /* InnataTests */,
+				2C1070D91E32FFA0006CD7FE /* InnataUITests */,
+				2C1070B81E32FFA0006CD7FE /* Products */,
+				2C1070E81E330066006CD7FE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2C1070B81E32FFA0006CD7FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C1070B71E32FFA0006CD7FE /* Innata.app */,
+				2C1070CB1E32FFA0006CD7FE /* InnataTests.xctest */,
+				2C1070D61E32FFA0006CD7FE /* InnataUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C1070B91E32FFA0006CD7FE /* Innata */ = {
+			isa = PBXGroup;
+			children = (
+				2C1070BA1E32FFA0006CD7FE /* AppDelegate.swift */,
+				2C1070EF1E330217006CD7FE /* Innata-Bridging-Header.h */,
+				2C1070BC1E32FFA0006CD7FE /* ViewController.swift */,
+				2C9B5B021E3315D700D7F659 /* ViewOne.swift */,
+				2C9B5B031E3315D700D7F659 /* ViewOne.xib */,
+				2C1070BE1E32FFA0006CD7FE /* Main.storyboard */,
+				2C9B5B061E331ABF00D7F659 /* ViewTwo.swift */,
+				2C9B5B071E331ABF00D7F659 /* ViewTwo.xib */,
+				2C1070C11E32FFA0006CD7FE /* Assets.xcassets */,
+				2C1070C31E32FFA0006CD7FE /* LaunchScreen.storyboard */,
+				2C1070C61E32FFA0006CD7FE /* Info.plist */,
+			);
+			path = Innata;
+			sourceTree = "<group>";
+		};
+		2C1070CE1E32FFA0006CD7FE /* InnataTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C1070CF1E32FFA0006CD7FE /* InnataTests.swift */,
+				2C1070D11E32FFA0006CD7FE /* Info.plist */,
+			);
+			path = InnataTests;
+			sourceTree = "<group>";
+		};
+		2C1070D91E32FFA0006CD7FE /* InnataUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2C1070DA1E32FFA0006CD7FE /* InnataUITests.swift */,
+				2C1070DC1E32FFA0006CD7FE /* Info.plist */,
+			);
+			path = InnataUITests;
+			sourceTree = "<group>";
+		};
+		2C1070E81E330066006CD7FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				877CA7431E331EBF00E14DA9 /* Charts.framework */,
+				2C1070ED1E330102006CD7FE /* CoreImage.framework */,
+				2C1070EB1E3300F6006CD7FE /* libstdc++.tbd */,
+				2C1070F21E330286006CD7FE /* TesseractOCR.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C1070B61E32FFA0006CD7FE /* Innata */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C1070DF1E32FFA0006CD7FE /* Build configuration list for PBXNativeTarget "Innata" */;
+			buildPhases = (
+				2C1070B31E32FFA0006CD7FE /* Sources */,
+				2C1070B41E32FFA0006CD7FE /* Frameworks */,
+				2C1070B51E32FFA0006CD7FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Innata;
+			productName = Innata;
+			productReference = 2C1070B71E32FFA0006CD7FE /* Innata.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2C1070CA1E32FFA0006CD7FE /* InnataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C1070E21E32FFA0006CD7FE /* Build configuration list for PBXNativeTarget "InnataTests" */;
+			buildPhases = (
+				2C1070C71E32FFA0006CD7FE /* Sources */,
+				2C1070C81E32FFA0006CD7FE /* Frameworks */,
+				2C1070C91E32FFA0006CD7FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C1070CD1E32FFA0006CD7FE /* PBXTargetDependency */,
+			);
+			name = InnataTests;
+			productName = InnataTests;
+			productReference = 2C1070CB1E32FFA0006CD7FE /* InnataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2C1070D51E32FFA0006CD7FE /* InnataUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C1070E51E32FFA0006CD7FE /* Build configuration list for PBXNativeTarget "InnataUITests" */;
+			buildPhases = (
+				2C1070D21E32FFA0006CD7FE /* Sources */,
+				2C1070D31E32FFA0006CD7FE /* Frameworks */,
+				2C1070D41E32FFA0006CD7FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C1070D81E32FFA0006CD7FE /* PBXTargetDependency */,
+			);
+			name = InnataUITests;
+			productName = InnataUITests;
+			productReference = 2C1070D61E32FFA0006CD7FE /* InnataUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C1070AF1E32FFA0006CD7FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Innata;
+				TargetAttributes = {
+					2C1070B61E32FFA0006CD7FE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = WD6FRG4V7Z;
+						ProvisioningStyle = Automatic;
+					};
+					2C1070CA1E32FFA0006CD7FE = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2C1070B61E32FFA0006CD7FE;
+					};
+					2C1070D51E32FFA0006CD7FE = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2C1070B61E32FFA0006CD7FE;
+					};
+				};
+			};
+			buildConfigurationList = 2C1070B21E32FFA0006CD7FE /* Build configuration list for PBXProject "Innata" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C1070AE1E32FFA0006CD7FE;
+			productRefGroup = 2C1070B81E32FFA0006CD7FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C1070B61E32FFA0006CD7FE /* Innata */,
+				2C1070CA1E32FFA0006CD7FE /* InnataTests */,
+				2C1070D51E32FFA0006CD7FE /* InnataUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C1070B51E32FFA0006CD7FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C1070C51E32FFA0006CD7FE /* LaunchScreen.storyboard in Resources */,
+				2C9B5B051E3315D700D7F659 /* ViewOne.xib in Resources */,
+				2C9B5B091E331ABF00D7F659 /* ViewTwo.xib in Resources */,
+				2C1070C21E32FFA0006CD7FE /* Assets.xcassets in Resources */,
+				2C1070C01E32FFA0006CD7FE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C1070C91E32FFA0006CD7FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C1070D41E32FFA0006CD7FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C1070B31E32FFA0006CD7FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C9B5B041E3315D700D7F659 /* ViewOne.swift in Sources */,
+				2C9B5B081E331ABF00D7F659 /* ViewTwo.swift in Sources */,
+				2C1070BD1E32FFA0006CD7FE /* ViewController.swift in Sources */,
+				2C1070BB1E32FFA0006CD7FE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C1070C71E32FFA0006CD7FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C1070D01E32FFA0006CD7FE /* InnataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C1070D21E32FFA0006CD7FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C1070DB1E32FFA0006CD7FE /* InnataUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C1070CD1E32FFA0006CD7FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C1070B61E32FFA0006CD7FE /* Innata */;
+			targetProxy = 2C1070CC1E32FFA0006CD7FE /* PBXContainerItemProxy */;
+		};
+		2C1070D81E32FFA0006CD7FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C1070B61E32FFA0006CD7FE /* Innata */;
+			targetProxy = 2C1070D71E32FFA0006CD7FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C1070BE1E32FFA0006CD7FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C1070BF1E32FFA0006CD7FE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C1070C31E32FFA0006CD7FE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C1070C41E32FFA0006CD7FE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C1070DD1E32FFA0006CD7FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C1070DE1E32FFA0006CD7FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C1070E01E32FFA0006CD7FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DEVELOPMENT_TEAM = WD6FRG4V7Z;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Innata/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = " -lstdc++";
+				PRODUCT_BUNDLE_IDENTIFIER = com.team.Innata;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./Innata/Innata-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C1070E11E32FFA0006CD7FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DEVELOPMENT_TEAM = WD6FRG4V7Z;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Innata/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = " -lstdc++";
+				PRODUCT_BUNDLE_IDENTIFIER = com.team.Innata;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./Innata/Innata-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2C1070E31E32FFA0006CD7FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = InnataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.InnataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Innata.app/Innata";
+			};
+			name = Debug;
+		};
+		2C1070E41E32FFA0006CD7FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = InnataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.InnataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Innata.app/Innata";
+			};
+			name = Release;
+		};
+		2C1070E61E32FFA0006CD7FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = InnataUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.InnataUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Innata;
+			};
+			name = Debug;
+		};
+		2C1070E71E32FFA0006CD7FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = InnataUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.InnataUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Innata;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C1070B21E32FFA0006CD7FE /* Build configuration list for PBXProject "Innata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C1070DD1E32FFA0006CD7FE /* Debug */,
+				2C1070DE1E32FFA0006CD7FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C1070DF1E32FFA0006CD7FE /* Build configuration list for PBXNativeTarget "Innata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C1070E01E32FFA0006CD7FE /* Debug */,
+				2C1070E11E32FFA0006CD7FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C1070E21E32FFA0006CD7FE /* Build configuration list for PBXNativeTarget "InnataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C1070E31E32FFA0006CD7FE /* Debug */,
+				2C1070E41E32FFA0006CD7FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C1070E51E32FFA0006CD7FE /* Build configuration list for PBXNativeTarget "InnataUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C1070E61E32FFA0006CD7FE /* Debug */,
+				2C1070E71E32FFA0006CD7FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C1070AF1E32FFA0006CD7FE /* Project object */;
+}
