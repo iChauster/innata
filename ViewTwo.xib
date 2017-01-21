@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewTwo" customModule="Innata" customModuleProvider="target">
+            <connections>
+                <outlet property="cam" destination="ghp-29-CRb" id="bhq-4N-X1T"/>
+                <outlet property="imgv" destination="xcA-5k-CzR" id="yAh-ky-b1T"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xcA-5k-CzR">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghp-29-CRb">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ghp-29-CRb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="260-wz-LRQ"/>
+                <constraint firstAttribute="bottom" secondItem="ghp-29-CRb" secondAttribute="bottom" id="70A-vE-67v"/>
+                <constraint firstItem="xcA-5k-CzR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="761-GX-yxS"/>
+                <constraint firstItem="xcA-5k-CzR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="83q-LF-C17"/>
+                <constraint firstItem="xcA-5k-CzR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Hyx-U9-46K"/>
+                <constraint firstItem="xcA-5k-CzR" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="QBe-SG-CiX"/>
+                <constraint firstAttribute="bottom" secondItem="xcA-5k-CzR" secondAttribute="bottom" id="enR-Dp-7F7"/>
+                <constraint firstAttribute="trailing" secondItem="ghp-29-CRb" secondAttribute="trailing" id="hdP-13-Plt"/>
+                <constraint firstItem="ghp-29-CRb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="o6q-JZ-rON"/>
+                <constraint firstAttribute="trailing" secondItem="xcA-5k-CzR" secondAttribute="trailing" id="zRm-8H-hh9"/>
+            </constraints>
+            <point key="canvasLocation" x="35.5" y="54.5"/>
+        </view>
+    </objects>
+</document>
