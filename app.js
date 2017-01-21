@@ -19,6 +19,7 @@ io.on('connection', function (socket) {
   socket.emit('news', { hello: 'world' });
   socket.on('my other event', function (data) {
     console.log(data);
+    console.log("up and running")
   });
 });
 
@@ -71,3 +72,6 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
   
+  app.listen(process.env.PORT || 3000, function(){
+  console.log("innata: port : %d in %s and it's up and running yalls", this.address().port, app.settings.env);
+});
