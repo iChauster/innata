@@ -95,5 +95,5 @@ app.use(function(err, req, res, next) {
 module.exports = app;
   
   app.listen(process.env.PORT || 3000, function(){
-  console.log("innata: port : %d in %s and it's up and running yalls", this.address().port, app.settings.env);
+  console.log("innata: port : %d in %s and running without any errors at port %d", this.address().port, app.settings.env);
 });
