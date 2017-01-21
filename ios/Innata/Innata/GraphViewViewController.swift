@@ -1,33 +1,29 @@
 //
-//  ViewOne.swift
+//  GraphViewViewController.swift
 //  Innata
 //
-//  Created by Ivan Chau on 1/20/17.
+//  Created by Kyle Li on 1/21/17.
 //  Copyright © 2017 Innata. All rights reserved.
 //
 
 import UIKit
+import Charts
 
-class ViewOne: UIViewController {
-    @IBOutlet weak var graphButton : UIBarButtonItem!
+class GraphViewViewController: UIViewController, ChartViewDelegate {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    override var prefersStatusBarHidden: Bool{
-        return true
-    }
-    @IBAction func showGraph(sender: AnyObject){
-        print("button pressed")
-        
-    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
     
-
+    }
     /*
     // MARK: - Navigation
 
