@@ -14,7 +14,8 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     @IBOutlet var cam: UIView!
     var capsesh : AVCaptureSession?
     let tesseract = G8Tesseract()
-    
+    @IBOutlet var imgv: UIImageView!
+
     
     var imgResult : AVCaptureStillImageOutput?
     var prelay : AVCaptureVideoPreviewLayer?
@@ -41,14 +42,15 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     override func  viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         prelay?.frame = cam.bounds
-        cam.isHidden = false;
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        cam.isHidden = false;
+        imgv.isHidden = true;
         capsesh = AVCaptureSession()
         capsesh?.sessionPreset = AVCaptureSessionPresetHigh
+
         
         let camcord = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         
@@ -62,8 +64,7 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
                     capsesh?.addOutput(imgResult)
                     
                     prelay = AVCaptureVideoPreviewLayer(session: capsesh)
-                    
-                    prelay?.videoGravity = AVLayerVideoGravityResizeAspect
+                    prelay?.videoGravity = AVLayerVideoGravityResizeAspectFill
                     
                     prelay?.connection.videoOrientation = AVCaptureVideoOrientation.portrait
                     
@@ -79,7 +80,6 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         }
     }
 
-    @IBOutlet var imgv: UIImageView!
     func photoShot(){
         if let videoConnection = imgResult?.connection(withMediaType: AVMediaTypeVideo){
                 videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
@@ -89,16 +89,16 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
                     let imgd = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
                     let dp = CGDataProvider(data : imgd as! CFData)
                     let imgref = CGImage(jpegDataProviderSource: dp!, decode: nil, shouldInterpolate: true, intent: .defaultIntent)
+                    let img = UIImage(cgImage: imgref!, scale: 1.0, orientation: UIImageOrientation.right)
+                    
                     DispatchQueue.main.async(execute: {
-                        let img = UIImage(cgImage: imgref!, scale: 1.0, orientation: UIImageOrientation.right)
                         self.imgv.image = img
                         self.imgv.isHidden = false
                         self.cam.isHidden = true
-                        let scaledImage = self.scaleImage(image: img, maxDimension: 640)
-                        print(self.recog(image: scaledImage))
-                        
                     
                     });
+                    let scaledImage = self.scaleImage(image: img, maxDimension: 640)
+                    print(self.recog(image: scaledImage))
                     
                     
                 }})
@@ -108,12 +108,10 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     var fototook = Bool()
     func anothaOne(){
         if fototook == true{
-            imgv.isHidden = false
             fototook = false
         }else{
             capsesh?.startRunning()
             fototook = true
-            imgv.isHidden = true
             photoShot()
         }
     }
@@ -149,8 +147,12 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         // 6
         tesseract.image = image.g8_blackAndWhite()
         tesseract.recognize()
+        print(getPrice(str: tesseract.recognizedText))
         let a = UIAlertController(title: "Text Received", message: tesseract.recognizedText, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default) { (alert) in
+            self.cam.isHidden = false
+            self.imgv.isHidden = true
+            self.fototook = false
             a.dismiss(animated: true, completion: {
                 
             })
@@ -161,6 +163,29 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         }
         // 7
         return tesseract.recognizedText
+    }
+    func getPrice(str : String) -> Double {
+        if(str.contains("$")){
+            let arr = str.components(separatedBy: "$")
+            let b = arr[1].components(separatedBy: " ")
+            var val = 0.0
+            val = Double(b[0])!
+            
+            return val
+        }else if(str.contains("Total")){
+            
+            let arr = str.components(separatedBy: "Total")
+            let b = arr[1].components(separatedBy: " ")
+            let notDigits = NSCharacterSet.decimalDigits.inverted
+            for a in b {
+                if(a.rangeOfCharacter(from: notDigits)?.isEmpty)!{
+                    return Double(a)!
+                }
+            }
+            
+        }
+        return 0.0;
+        
     }
     
 }
