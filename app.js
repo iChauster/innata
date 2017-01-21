@@ -8,9 +8,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var request = require('superagent');
 var routes = require('./routes/index');
 var users = require('./routes/users');
+ var apiKey = "afa1d15ae07d23d7b3c4e6443cabbf7d";
 
 
 server.listen(8080);
@@ -63,10 +64,8 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-var request = require('superagent');
-request.get('http://api.reimaginebanking.com/atms?key=your_key').end(function(res){
-    foo(res.status);
-    bar(res.body); //do something
+request.get('http://api.reimaginebanking.com/atms?key=afa1d15ae07d23d7b3c4e6443cabbf7d').end(function(res){
+    console.log("connected to capital one")//do something
 });
 // error handlers
 
