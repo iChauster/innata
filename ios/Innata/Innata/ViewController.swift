@@ -9,8 +9,29 @@
 import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Scroll View:
+        
+        var VOne : ViewOne = ViewOne(nibName: "ViewOne", bundle: nil)
+        var VTwo : ViewTwo = ViewTwo(nibName: "ViewTwo", bundle: nil)
+        
+        self.addChildViewController(VOne)
+        self.addChildViewController(VTwo)
+        self.scrollView.addSubview(VOne.view)
+        self.scrollView.addSubview(VTwo.view)
+        VOne.didMove(toParentViewController: self)
+        VTwo.didMove(toParentViewController: self)
+        var secondScrollFrame : CGRect = VTwo.view.frame
+        secondScrollFrame.origin.x = self.view.frame.width
+        VTwo.view.frame = secondScrollFrame
+        self.scrollView.contentSize = CGSize(width: self.view.frame.width * 2, height: self.view.frame.size.height)
+        
+        
+        
+        
+        
         let imagePickerActionSheet = UIAlertController(title: "Snap/Upload Photo",
                                                        message: nil, preferredStyle: .actionSheet)
         // 3
@@ -26,7 +47,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
             imagePickerActionSheet.addAction(cameraButton)
         }
-        // Do any additional setup after loading the view, typically from a nib.
+        let cancelButton = UIAlertAction(title: "Cancel",
+                                         style: .cancel) { (alert) -> Void in
+        }
+        imagePickerActionSheet.addAction(cancelButton)
+        // 6
+        present(imagePickerActionSheet, animated: true, completion: nil)        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
