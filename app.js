@@ -65,7 +65,7 @@ app.use(function(req, res, next) {
 });
 
 request.get('http://api.reimaginebanking.com/atms?key=afa1d15ae07d23d7b3c4e6443cabbf7d').end(function(res){
-    console.log("connected to capital one")//do something
+    console.log("connected to capital one, nessie")//do something
 });
 // error handlers
 
