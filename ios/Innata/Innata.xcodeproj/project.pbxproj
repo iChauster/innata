@@ -17,12 +17,11 @@
 		2C1070EC1E3300F6006CD7FE /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1070EB1E3300F6006CD7FE /* libstdc++.tbd */; };
 		2C1070EE1E330102006CD7FE /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1070ED1E330102006CD7FE /* CoreImage.framework */; };
 		2C1070F31E330286006CD7FE /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1070F21E330286006CD7FE /* TesseractOCR.framework */; };
-
-        877CA7441E331EBF00E14DA9 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877CA7431E331EBF00E14DA9 /* Charts.framework */; };
 		2C9B5B041E3315D700D7F659 /* ViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B5B021E3315D700D7F659 /* ViewOne.swift */; };
 		2C9B5B051E3315D700D7F659 /* ViewOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9B5B031E3315D700D7F659 /* ViewOne.xib */; };
 		2C9B5B081E331ABF00D7F659 /* ViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B5B061E331ABF00D7F659 /* ViewTwo.swift */; };
 		2C9B5B091E331ABF00D7F659 /* ViewTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9B5B071E331ABF00D7F659 /* ViewTwo.xib */; };
+		877CA7441E331EBF00E14DA9 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877CA7431E331EBF00E14DA9 /* Charts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,13 +59,11 @@
 		2C1070ED1E330102006CD7FE /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		2C1070EF1E330217006CD7FE /* Innata-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Innata-Bridging-Header.h"; sourceTree = "<group>"; };
 		2C1070F21E330286006CD7FE /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = "<group>"; };
-
-		877CA7431E331EBF00E14DA9 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../Charts-master/build/Debug/Charts.framework"; sourceTree = "<group>"; };
-
 		2C9B5B021E3315D700D7F659 /* ViewOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewOne.swift; sourceTree = "<group>"; };
 		2C9B5B031E3315D700D7F659 /* ViewOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewOne.xib; sourceTree = "<group>"; };
 		2C9B5B061E331ABF00D7F659 /* ViewTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTwo.swift; sourceTree = "<group>"; };
 		2C9B5B071E331ABF00D7F659 /* ViewTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewTwo.xib; sourceTree = "<group>"; };
+		877CA7431E331EBF00E14DA9 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../Charts-master/build/Debug/Charts.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +128,7 @@
 				2C9B5B061E331ABF00D7F659 /* ViewTwo.swift */,
 				2C9B5B071E331ABF00D7F659 /* ViewTwo.xib */,
 				2C1070C11E32FFA0006CD7FE /* Assets.xcassets */,
+				877CA7451E33CA6A00E14DA9 /* images */,
 				2C1070C31E32FFA0006CD7FE /* LaunchScreen.storyboard */,
 				2C1070C61E32FFA0006CD7FE /* Info.plist */,
 			);
@@ -164,6 +162,13 @@
 				2C1070F21E330286006CD7FE /* TesseractOCR.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		877CA7451E33CA6A00E14DA9 /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
