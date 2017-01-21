@@ -13,15 +13,22 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
 
     @IBOutlet var cam: UIView!
     var capsesh : AVCaptureSession?
+    let tesseract = G8Tesseract()
     
     
     var imgResult : AVCaptureStillImageOutput?
     var prelay : AVCaptureVideoPreviewLayer?
     override func viewDidLoad() {
         super.viewDidLoad()
-        var i = UIImage(imageLiteralResourceName: "ReceiptSwiss.jpg")
-        let scaledImage = self.scaleImage(image: i, maxDimension: 200)
-        print(self.recog(image: scaledImage))
+        // 2
+        tesseract.language = "eng"
+        // 3
+        tesseract.engineMode = .tesseractCubeCombined
+        // 4
+        tesseract.pageSegmentationMode = .auto
+        // 5
+        tesseract.maximumRecognitionTime = 30.0
+
         //when it captures
         
         // Do any additional setup after loading the view.
@@ -83,11 +90,12 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
                     let imgref = CGImage(jpegDataProviderSource: dp!, decode: nil, shouldInterpolate: true, intent: .defaultIntent)
                     DispatchQueue.main.async(execute: {
                         let img = UIImage(cgImage: imgref!, scale: 1.0, orientation: UIImageOrientation.right)
-                        let scaledImage = self.scaleImage(image: img, maxDimension: 640)
-                        print(self.recog(image: scaledImage))
                         self.imgv.image = img
                         self.imgv.isHidden = false
-                        self.view.layer.zPosition = 0
+                        self.cam.isHidden = true
+                        let scaledImage = self.scaleImage(image: img, maxDimension: 640)
+                        print(self.recog(image: scaledImage))
+                        
                     
                     });
                     
@@ -99,11 +107,12 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     var fototook = Bool()
     func anothaOne(){
         if fototook == true{
-            imgv.isHidden = true
+            imgv.isHidden = false
             fototook = false
         }else{
             capsesh?.startRunning()
             fototook = true
+            imgv.isHidden = true
             photoShot()
         }
     }
@@ -135,18 +144,20 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     }
     
     func recog(image:UIImage) -> String{
-        let tesseract = G8Tesseract()
-        // 2
-        tesseract.language = "eng"
-        // 3
-        tesseract.engineMode = .tesseractCubeCombined
-        // 4
-        tesseract.pageSegmentationMode = .auto
-        // 5
-        tesseract.maximumRecognitionTime = 30.0
+        print("Image going through")
         // 6
         tesseract.image = image.g8_blackAndWhite()
         tesseract.recognize()
+        let a = UIAlertController(title: "Text Received", message: tesseract.recognizedText, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default) { (alert) in
+            a.dismiss(animated: true, completion: {
+                
+            })
+        }
+        a.addAction(action)
+        self.present(a, animated: true) { 
+            
+        }
         // 7
         return tesseract.recognizedText
     }

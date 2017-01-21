@@ -31,12 +31,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.55931351722070399" green="1" blue="0.66573549426761436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="XrJ-PS-uXl" secondAttribute="trailing" constant="106" id="64Z-1X-jPC"/>
+                            <constraint firstItem="XrJ-PS-uXl" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="303" id="6G0-MA-sGu"/>
                             <constraint firstItem="XrJ-PS-uXl" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6JV-gK-KE5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XrJ-PS-uXl" secondAttribute="trailing" constant="106" id="9fI-ce-zGb"/>
                             <constraint firstItem="XrJ-PS-uXl" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="106" id="Bbq-HU-EnC"/>
+                            <constraint firstItem="XrJ-PS-uXl" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="106" id="Qo6-k0-VYg"/>
                             <constraint firstItem="XrJ-PS-uXl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="SaF-Nw-965"/>
                             <constraint firstItem="XrJ-PS-uXl" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="106" id="Ybh-Ub-l38"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XrJ-PS-uXl" secondAttribute="trailing" constant="106" id="p4M-Vj-I5U"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="XrJ-PS-uXl" secondAttribute="bottom" constant="323" id="pQ6-UQ-92l"/>
                         </constraints>
                     </view>
                 </viewController>
