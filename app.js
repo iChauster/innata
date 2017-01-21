@@ -37,7 +37,25 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+//api.reimaginebanking.com/customers?key=9203847529304875
+//Config Stuff
+var Config = (function() {
+  function Config() { }
+  Config.baseUrl = "http://api.reimaginebanking.com";
 
+  Config.getApiKey = function() {
+    return this.apiKey;
+  };
+
+  Config.setApiKey = function(key) {
+    this.apiKey = key;
+  };
+
+  Config.request = request;
+
+  return Config;
+})();
+Config.setApiKey(apiKey);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -45,6 +63,11 @@ app.use(function(req, res, next) {
   next(err);
 });
 
+var request = require('superagent');
+request.get('http://api.reimaginebanking.com/atms?key=your_key').end(function(res){
+    foo(res.status);
+    bar(res.body); //do something
+});
 // error handlers
 
 // development error handler
