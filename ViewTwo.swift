@@ -21,6 +21,7 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     var prelay : AVCaptureVideoPreviewLayer?
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // 2
         tesseract.language = "eng"
         // 3
@@ -28,10 +29,8 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         // 4
         tesseract.pageSegmentationMode = .auto
         // 5
-        tesseract.maximumRecognitionTime = 30.0
-
+        tesseract.maximumRecognitionTime = 45.0
         //when it captures
-        
         // Do any additional setup after loading the view.
     }
 
@@ -148,6 +147,13 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         tesseract.image = image.g8_blackAndWhite()
         tesseract.recognize()
         print(getPrice(str: tesseract.recognizedText))
+        let arr = tesseract.confidences(by: .word) as! [G8RecognizedBlock]
+        for a : G8RecognizedBlock in arr {
+            if(a.text == "Total"){
+                print("Total found")
+                print(a.boundingBox)
+            }
+        }
         let a = UIAlertController(title: "Text Received", message: tesseract.recognizedText, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default) { (alert) in
             self.cam.isHidden = false
@@ -165,22 +171,16 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         return tesseract.recognizedText
     }
     func getPrice(str : String) -> Double {
-        if(str.contains("$")){
-            let arr = str.components(separatedBy: "$")
-            let b = arr[1].components(separatedBy: " ")
-            var val = 0.0
-            val = Double(b[0])!
-            
-            return val
-        }else if(str.contains("Total")){
+        
+        if(str.contains("Total")){
             
             let arr = str.components(separatedBy: "Total")
             let b = arr[1].components(separatedBy: " ")
             let notDigits = NSCharacterSet.decimalDigits.inverted
             for a in b {
-                if(a.rangeOfCharacter(from: notDigits)?.isEmpty)!{
+                /*if(a.rangeOfCharacter(from: notDigits)?.isEmpty)!{
                     return Double(a)!
-                }
+                }*/
             }
             
         }
