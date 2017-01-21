@@ -17,6 +17,7 @@
 		2C1070EC1E3300F6006CD7FE /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1070EB1E3300F6006CD7FE /* libstdc++.tbd */; };
 		2C1070EE1E330102006CD7FE /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1070ED1E330102006CD7FE /* CoreImage.framework */; };
 		2C1070F31E330286006CD7FE /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1070F21E330286006CD7FE /* TesseractOCR.framework */; };
+		877CA7441E331EBF00E14DA9 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877CA7431E331EBF00E14DA9 /* Charts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		2C1070ED1E330102006CD7FE /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		2C1070EF1E330217006CD7FE /* Innata-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Innata-Bridging-Header.h"; sourceTree = "<group>"; };
 		2C1070F21E330286006CD7FE /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = "<group>"; };
+		877CA7431E331EBF00E14DA9 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../Charts-master/build/Debug/Charts.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				877CA7441E331EBF00E14DA9 /* Charts.framework in Frameworks */,
 				2C1070EE1E330102006CD7FE /* CoreImage.framework in Frameworks */,
 				2C1070F31E330286006CD7FE /* TesseractOCR.framework in Frameworks */,
 				2C1070EC1E3300F6006CD7FE /* libstdc++.tbd in Frameworks */,
@@ -140,6 +143,7 @@
 		2C1070E81E330066006CD7FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				877CA7431E331EBF00E14DA9 /* Charts.framework */,
 				2C1070ED1E330102006CD7FE /* CoreImage.framework */,
 				2C1070EB1E3300F6006CD7FE /* libstdc++.tbd */,
 				2C1070F21E330286006CD7FE /* TesseractOCR.framework */,
