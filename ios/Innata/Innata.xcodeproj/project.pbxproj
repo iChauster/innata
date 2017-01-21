@@ -17,7 +17,14 @@
 		2C1070EC1E3300F6006CD7FE /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1070EB1E3300F6006CD7FE /* libstdc++.tbd */; };
 		2C1070EE1E330102006CD7FE /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1070ED1E330102006CD7FE /* CoreImage.framework */; };
 		2C1070F31E330286006CD7FE /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1070F21E330286006CD7FE /* TesseractOCR.framework */; };
+<<<<<<< HEAD
 		877CA7441E331EBF00E14DA9 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877CA7431E331EBF00E14DA9 /* Charts.framework */; };
+=======
+		2C9B5B041E3315D700D7F659 /* ViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B5B021E3315D700D7F659 /* ViewOne.swift */; };
+		2C9B5B051E3315D700D7F659 /* ViewOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9B5B031E3315D700D7F659 /* ViewOne.xib */; };
+		2C9B5B081E331ABF00D7F659 /* ViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B5B061E331ABF00D7F659 /* ViewTwo.swift */; };
+		2C9B5B091E331ABF00D7F659 /* ViewTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9B5B071E331ABF00D7F659 /* ViewTwo.xib */; };
+>>>>>>> 52631d8a3e7aaf57c615972f62655d4232c4c46a
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +62,14 @@
 		2C1070ED1E330102006CD7FE /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		2C1070EF1E330217006CD7FE /* Innata-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Innata-Bridging-Header.h"; sourceTree = "<group>"; };
 		2C1070F21E330286006CD7FE /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		877CA7431E331EBF00E14DA9 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../Charts-master/build/Debug/Charts.framework"; sourceTree = "<group>"; };
+=======
+		2C9B5B021E3315D700D7F659 /* ViewOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewOne.swift; sourceTree = "<group>"; };
+		2C9B5B031E3315D700D7F659 /* ViewOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewOne.xib; sourceTree = "<group>"; };
+		2C9B5B061E331ABF00D7F659 /* ViewTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTwo.swift; sourceTree = "<group>"; };
+		2C9B5B071E331ABF00D7F659 /* ViewTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewTwo.xib; sourceTree = "<group>"; };
+>>>>>>> 52631d8a3e7aaf57c615972f62655d4232c4c46a
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +128,11 @@
 				2C1070BA1E32FFA0006CD7FE /* AppDelegate.swift */,
 				2C1070EF1E330217006CD7FE /* Innata-Bridging-Header.h */,
 				2C1070BC1E32FFA0006CD7FE /* ViewController.swift */,
+				2C9B5B021E3315D700D7F659 /* ViewOne.swift */,
+				2C9B5B031E3315D700D7F659 /* ViewOne.xib */,
 				2C1070BE1E32FFA0006CD7FE /* Main.storyboard */,
+				2C9B5B061E331ABF00D7F659 /* ViewTwo.swift */,
+				2C9B5B071E331ABF00D7F659 /* ViewTwo.xib */,
 				2C1070C11E32FFA0006CD7FE /* Assets.xcassets */,
 				2C1070C31E32FFA0006CD7FE /* LaunchScreen.storyboard */,
 				2C1070C61E32FFA0006CD7FE /* Info.plist */,
@@ -219,6 +237,7 @@
 				TargetAttributes = {
 					2C1070B61E32FFA0006CD7FE = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = WD6FRG4V7Z;
 						ProvisioningStyle = Automatic;
 					};
 					2C1070CA1E32FFA0006CD7FE = {
@@ -259,6 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C1070C51E32FFA0006CD7FE /* LaunchScreen.storyboard in Resources */,
+				2C9B5B051E3315D700D7F659 /* ViewOne.xib in Resources */,
+				2C9B5B091E331ABF00D7F659 /* ViewTwo.xib in Resources */,
 				2C1070C21E32FFA0006CD7FE /* Assets.xcassets in Resources */,
 				2C1070C01E32FFA0006CD7FE /* Main.storyboard in Resources */,
 			);
@@ -285,6 +306,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9B5B041E3315D700D7F659 /* ViewOne.swift in Sources */,
+				2C9B5B081E331ABF00D7F659 /* ViewTwo.swift in Sources */,
 				2C1070BD1E32FFA0006CD7FE /* ViewController.swift in Sources */,
 				2C1070BB1E32FFA0006CD7FE /* AppDelegate.swift in Sources */,
 			);
@@ -439,7 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "compiler-default";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = WD6FRG4V7Z;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/**",
@@ -462,7 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "compiler-default";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = WD6FRG4V7Z;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/**",
