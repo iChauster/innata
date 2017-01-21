@@ -96,7 +96,7 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
                         self.cam.isHidden = true
                     
                     });
-                    let scaledImage = self.scaleImage(image: img, maxDimension: 640)
+                    let scaledImage = self.scaleImage(image: img, maxDimension: 720)
                     print(self.recog(image: scaledImage))
                     
                     
@@ -149,11 +149,15 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         print(getPrice(str: tesseract.recognizedText))
         let arr = tesseract.confidences(by: .word) as! [G8RecognizedBlock]
         for a : G8RecognizedBlock in arr {
-            if(a.text == "Total"){
+            if(a.text.caseInsensitiveCompare("Total")){
                 print("Total found")
                 print(a.boundingBox)
+                tesseract.rect = a.boundingBox;
+                tesseract.image = image.g8_blackAndWhite()
+                tesseract.recognize()
             }
         }
+        print(tesseract.recognizedText)
         let a = UIAlertController(title: "Text Received", message: tesseract.recognizedText, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default) { (alert) in
             self.cam.isHidden = false
