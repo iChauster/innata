@@ -154,7 +154,17 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         print(getPrice(str: tesseract.recognizedText))
         let arr = tesseract.confidences(by: .word) as! [G8RecognizedBlock]
         let title = tesseract.confidences(by: .textline) as! [G8RecognizedBlock]
-        print(title[0].text)
+        let comp = title[0].text
+        var mid = ""
+        if(comp == "Google Play Store"){
+            mid = "588409601756fc834d8ebf7d"
+            
+        }else if(comp == "Nathan Violin Lessons"){
+             mid = "58840f941756fc834d8ebf95"
+        }else{
+            mid = "5883ef201756fc834d8ebeb0"
+        }
+        
         for a : G8RecognizedBlock in arr {
             if(a.text.caseInsensitiveCompare("Total") == .orderedSame){
                 print("Total found")
@@ -181,7 +191,17 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
                 
             })
         }
+        let redo = UIAlertAction(title: "Retry", style: .cancel) { (alert) in
+            self.cam.isHidden = false
+            self.imgv.isHidden = true
+            self.fototook = false
+            a.dismiss(animated: true, completion: {
+                
+            })
+        }
+        
         a.addAction(action)
+        a.addAction(redo)
         self.present(a, animated: true) {
             self.active.stopAnimating()
             self.active.isHidden = true
