@@ -263,7 +263,9 @@ router.post('/getPurchases', function(req,res,next){
         Merchant.getMerchant(merch,function(ayy){
           var name = ayy.name;
           console.log(name);
+          var geocodePair = ayy.geocode
           text[i]["merchant_name"] = name;
+          text[i]["geocode"] = geocodePair
           i++;
           console.log('iteration: ' + i + " length: " + text.length);
           if(i < text.length){

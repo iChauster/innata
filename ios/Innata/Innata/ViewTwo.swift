@@ -153,18 +153,23 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         tesseract.recognize()
         print(getPrice(str: tesseract.recognizedText))
         let arr = tesseract.confidences(by: .word) as! [G8RecognizedBlock]
+        let title = tesseract.confidences(by: .textline) as! [G8RecognizedBlock]
+        print(title[0].text)
         for a : G8RecognizedBlock in arr {
             if(a.text.caseInsensitiveCompare("Total") == .orderedSame){
                 print("Total found")
-            
+                print(a.confidence)
                 print(a.boundingBox(atImageOf: image.size))
                 tesseract.image = image.g8_blackAndWhite()
                 let r = a.boundingBox(atImageOf:image.size)
                 tesseract.rect = r
                 tesseract.rect.size.width = image.size.width;
+                tesseract.rect.offsetBy(dx: 0.0, dy: -5.0)
                 tesseract.rect.size.height += 10;
                 tesseract.recognize()
-            }
+            }//else if(){
+                
+            //}
         }
         print(tesseract.recognizedText)
         let a = UIAlertController(title: "Text Received", message: tesseract.recognizedText, preferredStyle: .alert)

@@ -9,9 +9,17 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
-    @IBOutlet weak var 
+    @IBOutlet weak var merchant : UILabel!
+    @IBOutlet weak var dolla : UILabel!
+    @IBOutlet weak var date : UILabel!
+    @IBOutlet weak var desc : UILabel!
+    @IBOutlet weak var amountNum : UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        amountNum.clipsToBounds = true
+        amountNum.layer.cornerRadius = 12
+        
         // Initialization code
     }
 

@@ -10,12 +10,16 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet var scrollView: UIScrollView!
+    override var prefersStatusBarHidden: Bool{
+        return true;
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         //Scroll View:
         
         var VOne : ViewOne = ViewOne(nibName: "ViewOne", bundle: nil)
         var VTwo : ViewTwo = ViewTwo(nibName: "ViewTwo", bundle: nil)
+
         
         self.addChildViewController(VOne)
         self.addChildViewController(VTwo)

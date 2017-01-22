@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewThree" customModule="Innata" customModuleProvider="target">
+            <connections>
+                <outlet property="graph" destination="Npy-HF-zkx" id="Lez-WJ-uh8"/>
+                <outlet property="map" destination="hqt-yD-s7o" id="QgG-8M-5hM"/>
+                <outlet property="slider" destination="WGa-5G-anI" id="4LH-hr-Acb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdC-IN-mfo">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <color key="barTintColor" red="0.5593135172" green="1" blue="0.66573549430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Title" id="lhE-up-7yo">
+                            <barButtonItem key="leftBarButtonItem" systemItem="stop" id="82B-gY-Hdi">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="closeWithSender:" destination="-2" id="Nms-Xz-rqk"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqt-yD-s7o">
+                    <rect key="frame" x="0.0" y="44" width="375" height="307"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="307" id="pS8-BZ-g9m"/>
+                    </constraints>
+                </mapView>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WGa-5G-anI">
+                    <rect key="frame" x="128" y="318.5" width="118" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="114" id="0fF-4n-jMw"/>
+                    </constraints>
+                    <connections>
+                        <action selector="sliderChagedWithSender:" destination="-1" eventType="valueChanged" id="IMg-cK-fE9"/>
+                    </connections>
+                </slider>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Npy-HF-zkx" customClass="LineChartView" customModule="Charts">
+                    <rect key="frame" x="0.0" y="350" width="375" height="317"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hqt-yD-s7o" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1Ij-Pg-zkA"/>
+                <constraint firstAttribute="trailing" secondItem="WGa-5G-anI" secondAttribute="trailing" constant="131" id="3MO-zp-6D7"/>
+                <constraint firstItem="hqt-yD-s7o" firstAttribute="top" secondItem="hdC-IN-mfo" secondAttribute="bottom" id="7mW-dN-d4r"/>
+                <constraint firstItem="Npy-HF-zkx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7mw-NN-LSU"/>
+                <constraint firstItem="hqt-yD-s7o" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9Z3-oD-oDb"/>
+                <constraint firstAttribute="trailing" secondItem="hqt-yD-s7o" secondAttribute="trailing" id="B5F-PG-z3e"/>
+                <constraint firstItem="Npy-HF-zkx" firstAttribute="top" secondItem="WGa-5G-anI" secondAttribute="bottom" constant="1.5" id="Fvg-gk-LgO"/>
+                <constraint firstAttribute="trailing" secondItem="hdC-IN-mfo" secondAttribute="trailing" id="NGx-Sg-jUe"/>
+                <constraint firstItem="hdC-IN-mfo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NMH-06-9oM"/>
+                <constraint firstAttribute="bottom" secondItem="Npy-HF-zkx" secondAttribute="bottom" id="P4Z-Fi-NU6"/>
+                <constraint firstItem="hdC-IN-mfo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aYG-3N-YYK"/>
+                <constraint firstItem="WGa-5G-anI" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="dn7-yd-NOz"/>
+                <constraint firstItem="hdC-IN-mfo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iWK-GQ-i98"/>
+                <constraint firstAttribute="trailing" secondItem="Npy-HF-zkx" secondAttribute="trailing" id="lrh-u9-04y"/>
+                <constraint firstItem="WGa-5G-anI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ruu-PP-NEw"/>
+                <constraint firstItem="WGa-5G-anI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="130" id="ytT-OB-fMA"/>
+            </constraints>
+            <point key="canvasLocation" x="35.5" y="101.5"/>
+        </view>
+    </objects>
+</document>

@@ -8,5 +8,5 @@
 
 
 #import <TesseractOCR/TesseractOCR.h>
-
+#import "LFHeatMap.h"
 

@@ -17,6 +17,8 @@
 		2C1070EC1E3300F6006CD7FE /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1070EB1E3300F6006CD7FE /* libstdc++.tbd */; };
 		2C1070EE1E330102006CD7FE /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1070ED1E330102006CD7FE /* CoreImage.framework */; };
 		2C1070F31E330286006CD7FE /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1070F21E330286006CD7FE /* TesseractOCR.framework */; };
+		2C9598011E34E627005EE36E /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD5128D1E34BC050095656A /* Charts.framework */; };
+		2C9598021E34E627005EE36E /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD5128D1E34BC050095656A /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2C9B5B041E3315D700D7F659 /* ViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B5B021E3315D700D7F659 /* ViewOne.swift */; };
 		2C9B5B051E3315D700D7F659 /* ViewOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9B5B031E3315D700D7F659 /* ViewOne.xib */; };
 		2C9B5B081E331ABF00D7F659 /* ViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B5B061E331ABF00D7F659 /* ViewTwo.swift */; };
@@ -24,6 +26,12 @@
 		2CD5121B1E340C8C0095656A /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 2CD5121A1E340C8C0095656A /* tessdata */; };
 		2CD5124E1E3459D10095656A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5124C1E3459D10095656A /* TableViewCell.swift */; };
 		2CD5124F1E3459D10095656A /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD5124D1E3459D10095656A /* TableViewCell.xib */; };
+		2CD5125E1E3485EB0095656A /* ViewThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5125C1E3485EB0095656A /* ViewThree.swift */; };
+		2CD5125F1E3485EB0095656A /* ViewThree.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD5125D1E3485EB0095656A /* ViewThree.xib */; };
+		2CD512611E3486050095656A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD512601E3486050095656A /* MapKit.framework */; };
+		2CD512851E34A2DC0095656A /* LFHeatMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD512841E34A2DC0095656A /* LFHeatMap.m */; };
+		2CD512921E34BC180095656A /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD5128D1E34BC050095656A /* Charts.framework */; };
+		2CD512941E34BD960095656A /* Cash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD512931E34BD960095656A /* Cash.swift */; };
 		877CA7471E33DF1900E14DA9 /* GraphViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877CA7461E33DF1900E14DA9 /* GraphViewViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +50,49 @@
 			remoteGlobalIDString = 2C1070B61E32FFA0006CD7FE;
 			remoteInfo = Innata;
 		};
+		2C9598031E34E627005EE36E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CD512861E34BC040095656A /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06165F231D8110E600722320;
+			remoteInfo = Charts;
+		};
+		2CD5128C1E34BC050095656A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CD512861E34BC040095656A /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F241D8110E600722320;
+			remoteInfo = Charts;
+		};
+		2CD5128E1E34BC050095656A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CD512861E34BC040095656A /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06B120D51D811E6200D14B02;
+			remoteInfo = ChartsRealm;
+		};
+		2CD512901E34BC050095656A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CD512861E34BC040095656A /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F2E1D8110E600722320;
+			remoteInfo = ChartsTests;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2C9598051E34E627005EE36E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2C9598021E34E627005EE36E /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2C1070B71E32FFA0006CD7FE /* Innata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Innata.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +119,13 @@
 		2CD5121A1E340C8C0095656A /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		2CD5124C1E3459D10095656A /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		2CD5124D1E3459D10095656A /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		2CD5125C1E3485EB0095656A /* ViewThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewThree.swift; sourceTree = "<group>"; };
+		2CD5125D1E3485EB0095656A /* ViewThree.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewThree.xib; sourceTree = "<group>"; };
+		2CD512601E3486050095656A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2CD512831E34A2DC0095656A /* LFHeatMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHeatMap.h; sourceTree = "<group>"; };
+		2CD512841E34A2DC0095656A /* LFHeatMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHeatMap.m; sourceTree = "<group>"; };
+		2CD512861E34BC040095656A /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		2CD512931E34BD960095656A /* Cash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cash.swift; sourceTree = "<group>"; };
 		877CA7461E33DF1900E14DA9 /* GraphViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +134,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD512921E34BC180095656A /* Charts.framework in Frameworks */,
+				2CD512611E3486050095656A /* MapKit.framework in Frameworks */,
 				2C1070EE1E330102006CD7FE /* CoreImage.framework in Frameworks */,
+				2C9598011E34E627005EE36E /* Charts.framework in Frameworks */,
 				2C1070F31E330286006CD7FE /* TesseractOCR.framework in Frameworks */,
 				2C1070EC1E3300F6006CD7FE /* libstdc++.tbd in Frameworks */,
 			);
@@ -103,6 +163,7 @@
 		2C1070AE1E32FFA0006CD7FE = {
 			isa = PBXGroup;
 			children = (
+				2CD512861E34BC040095656A /* Charts.xcodeproj */,
 				2C1070B91E32FFA0006CD7FE /* Innata */,
 				2C1070CE1E32FFA0006CD7FE /* InnataTests */,
 				2C1070D91E32FFA0006CD7FE /* InnataUITests */,
@@ -126,10 +187,15 @@
 			children = (
 				2CD5121A1E340C8C0095656A /* tessdata */,
 				2C1070BA1E32FFA0006CD7FE /* AppDelegate.swift */,
+				2CD512831E34A2DC0095656A /* LFHeatMap.h */,
+				2CD512841E34A2DC0095656A /* LFHeatMap.m */,
 				2C1070EF1E330217006CD7FE /* Innata-Bridging-Header.h */,
 				2C1070BC1E32FFA0006CD7FE /* ViewController.swift */,
 				2C9B5B021E3315D700D7F659 /* ViewOne.swift */,
 				2CD5124C1E3459D10095656A /* TableViewCell.swift */,
+				2CD5125C1E3485EB0095656A /* ViewThree.swift */,
+				2CD512931E34BD960095656A /* Cash.swift */,
+				2CD5125D1E3485EB0095656A /* ViewThree.xib */,
 				2CD5124D1E3459D10095656A /* TableViewCell.xib */,
 				877CA7461E33DF1900E14DA9 /* GraphViewViewController.swift */,
 				2C9B5B031E3315D700D7F659 /* ViewOne.xib */,
@@ -165,11 +231,22 @@
 		2C1070E81E330066006CD7FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CD512601E3486050095656A /* MapKit.framework */,
 				2C1070ED1E330102006CD7FE /* CoreImage.framework */,
 				2C1070EB1E3300F6006CD7FE /* libstdc++.tbd */,
 				2C1070F21E330286006CD7FE /* TesseractOCR.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2CD512871E34BC040095656A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CD5128D1E34BC050095656A /* Charts.framework */,
+				2CD5128F1E34BC050095656A /* ChartsRealm.framework */,
+				2CD512911E34BC050095656A /* ChartsTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		877CA7451E33CA6A00E14DA9 /* images */ = {
@@ -189,10 +266,12 @@
 				2C1070B31E32FFA0006CD7FE /* Sources */,
 				2C1070B41E32FFA0006CD7FE /* Frameworks */,
 				2C1070B51E32FFA0006CD7FE /* Resources */,
+				2C9598051E34E627005EE36E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2C9598041E34E627005EE36E /* PBXTargetDependency */,
 			);
 			name = Innata;
 			productName = Innata;
@@ -273,6 +352,12 @@
 			mainGroup = 2C1070AE1E32FFA0006CD7FE;
 			productRefGroup = 2C1070B81E32FFA0006CD7FE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2CD512871E34BC040095656A /* Products */;
+					ProjectRef = 2CD512861E34BC040095656A /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2C1070B61E32FFA0006CD7FE /* Innata */,
@@ -282,12 +367,37 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		2CD5128D1E34BC050095656A /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 2CD5128C1E34BC050095656A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2CD5128F1E34BC050095656A /* ChartsRealm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ChartsRealm.framework;
+			remoteRef = 2CD5128E1E34BC050095656A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2CD512911E34BC050095656A /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 2CD512901E34BC050095656A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		2C1070B51E32FFA0006CD7FE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2C1070C51E32FFA0006CD7FE /* LaunchScreen.storyboard in Resources */,
+				2CD5125F1E3485EB0095656A /* ViewThree.xib in Resources */,
 				2C9B5B051E3315D700D7F659 /* ViewOne.xib in Resources */,
 				2CD5124F1E3459D10095656A /* TableViewCell.xib in Resources */,
 				2C9B5B091E331ABF00D7F659 /* ViewTwo.xib in Resources */,
@@ -318,7 +428,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD512851E34A2DC0095656A /* LFHeatMap.m in Sources */,
+				2CD512941E34BD960095656A /* Cash.swift in Sources */,
 				2C9B5B041E3315D700D7F659 /* ViewOne.swift in Sources */,
+				2CD5125E1E3485EB0095656A /* ViewThree.swift in Sources */,
 				2C9B5B081E331ABF00D7F659 /* ViewTwo.swift in Sources */,
 				877CA7471E33DF1900E14DA9 /* GraphViewViewController.swift in Sources */,
 				2CD5124E1E3459D10095656A /* TableViewCell.swift in Sources */,
@@ -355,6 +468,11 @@
 			isa = PBXTargetDependency;
 			target = 2C1070B61E32FFA0006CD7FE /* Innata */;
 			targetProxy = 2C1070D71E32FFA0006CD7FE /* PBXContainerItemProxy */;
+		};
+		2C9598041E34E627005EE36E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 2C9598031E34E627005EE36E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -474,6 +592,7 @@
 		2C1070E01E32FFA0006CD7FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "compiler-default";
 				DEVELOPMENT_TEAM = ZDXRK6UNH5;
@@ -497,6 +616,7 @@
 		2C1070E11E32FFA0006CD7FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "compiler-default";
 				DEVELOPMENT_TEAM = ZDXRK6UNH5;

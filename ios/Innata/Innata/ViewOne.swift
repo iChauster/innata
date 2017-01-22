@@ -9,18 +9,22 @@
 import UIKit
 
 class ViewOne: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var mapButton: UIBarButtonItem!
     @IBOutlet weak var graphButton : UIBarButtonItem!
     @IBOutlet weak var tableView : UITableView!
     var array = NSArray()
-    
+    var gArray = NSMutableArray()
     override var prefersStatusBarHidden: Bool {
         return true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        tableView.register(UINib(nibName: "TableViewCell", bundle:nil), forCellReuseIdentifier: "InnataCell")
+
         let url = "http://localhost:3000/"
         let headers = [
             "cache-control": "no-cache",
@@ -59,15 +63,28 @@ class ViewOne: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "InnataCell", for: indexPath) as! TableViewCell
+        let object = self.array[indexPath.row] as! NSDictionary
+        var a = round(100.0 * (object["amount"]as! Double)) / 100.0
+        cell.dolla.text = "$" + String(a)
+        cell.merchant.text = object["merchant_name"] as? String
+        cell.date.text = object["purchase_date"] as? String
+        cell.desc.text = object["description"] as? String
+        gArray.add(object["geocode"])
+        return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1;
+        return self.array.count
     }
     
     @IBAction func showGraph(sender: AnyObject){
         print("button pressed")
-        
+        var VThree : ViewThree = ViewThree(nibName:"ViewThree", bundle:nil)
+        VThree.geoArray = self.gArray
+        VThree.purchasesArray = self.array
+        present(VThree, animated: true) { 
+            
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
