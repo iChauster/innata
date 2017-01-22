@@ -69,6 +69,7 @@ class ViewThree: UIViewController, ChartViewDelegate {
                 if(date2?.compare(endDate as Date) == .orderedAscending){
                     elapsed = true
                 }else{
+                    if((obj["amount"] as! Double) <  1000000){
                     if(d.object(forKey: "Week" + String(i)) == nil){
                         d["Week" + String(i)] = obj["amount"] as! Double
                     }else{
@@ -76,6 +77,9 @@ class ViewThree: UIViewController, ChartViewDelegate {
                         d["Week" + String(i)] = g
                     }
                     index += 1
+                    }else{
+                        index += 1
+                    }
                 }
             }
         }
@@ -85,6 +89,7 @@ class ViewThree: UIViewController, ChartViewDelegate {
             let index = b.index(b.startIndex, offsetBy: 4)
 
             b = b.substring(from: index)
+            
             let graphob = Cash(week: Int(b), money: (v as! Double))
             self.results.append(graphob)
         }

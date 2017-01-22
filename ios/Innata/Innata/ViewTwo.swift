@@ -18,7 +18,7 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     
     @IBOutlet var imgv: UIImageView!
     
-    
+    let url = "https://innata.herokuapp.com/"
     var imgResult : AVCaptureStillImageOutput?
     var prelay : AVCaptureVideoPreviewLayer?
     override func viewDidLoad() {
@@ -154,7 +154,10 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         print(getPrice(str: tesseract.recognizedText))
         let arr = tesseract.confidences(by: .word) as! [G8RecognizedBlock]
         let title = tesseract.confidences(by: .textline) as! [G8RecognizedBlock]
-        let comp = title[0].text
+        var comp = ""
+        if(title.count > 0){
+             comp = title[0].text
+        }
         var mid = ""
         if(comp == "Google Play Store"){
             mid = "588409601756fc834d8ebf7d"
@@ -182,13 +185,21 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
             //}
         }
         print(tesseract.recognizedText)
-        let a = UIAlertController(title: "Text Received", message: tesseract.recognizedText, preferredStyle: .alert)
+        if(comp == ""){
+            comp = "Text Analyzed"
+        }
+        let a = UIAlertController(title: comp, message: tesseract.recognizedText, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default) { (alert) in
             self.cam.isHidden = false
             self.imgv.isHidden = true
             self.fototook = false
             a.dismiss(animated: true, completion: {
+                /*var txt = self.tesseract.recognizedText
                 
+                txt = txt?.replaceAll("[^0-9.,]+","");
+                
+
+                makePurchase(merchid: mid,amount: txt!)*/
             })
         }
         let redo = UIAlertAction(title: "Retry", style: .cancel) { (alert) in
@@ -210,6 +221,41 @@ class ViewTwo: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         // 7
         return tesseract.recognizedText
     }
+   /* func makePurchase(merchid: String, amount:String){
+        
+        let headers = [
+            "cache-control": "no-cache",
+            "content-type": "application/x-www-form-urlencoded"
+        ]
+        let d = NSDate()
+        var dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        var dateString = dateFormatter.string(from:d as Date)
+        let id = UserDefaults.standard.string(forKey: "account")
+        var str = "id=" + id! + "&merchant="+merchid+"&medium=balance&date="
+        str += (dateString+"&amount=")
+        str += (amount+"&description=Via receipt scan")
+        let postData = NSMutableData(data: str.data(using: String.Encoding.utf8)!)
+        
+        let request = NSMutableURLRequest(url: NSURL(string: url + "makePurchase")! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = headers
+        request.httpBody = postData as Data
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            if (error != nil) {
+                print(error)
+            } else {
+                let httpResponse = response as? HTTPURLResponse
+                print(httpResponse)
+            }
+        })
+        
+        dataTask.resume()
+    }*/
     func getPrice(str : String) -> Double {
         
         if(str.contains("Total")){

@@ -25,7 +25,7 @@ class ViewOne: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.tableView.dataSource = self
         tableView.register(UINib(nibName: "TableViewCell", bundle:nil), forCellReuseIdentifier: "InnataCell")
 
-        let url = "http://localhost:3000/"
+        let url = "http://innata.herokuapp.com/"
         let headers = [
             "cache-control": "no-cache",
             "content-type": "application/x-www-form-urlencoded"
