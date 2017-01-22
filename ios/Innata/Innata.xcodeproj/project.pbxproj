@@ -21,8 +21,10 @@
 		2C9B5B051E3315D700D7F659 /* ViewOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9B5B031E3315D700D7F659 /* ViewOne.xib */; };
 		2C9B5B081E331ABF00D7F659 /* ViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B5B061E331ABF00D7F659 /* ViewTwo.swift */; };
 		2C9B5B091E331ABF00D7F659 /* ViewTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9B5B071E331ABF00D7F659 /* ViewTwo.xib */; };
+		2CD5121B1E340C8C0095656A /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 2CD5121A1E340C8C0095656A /* tessdata */; };
+		2CD5124E1E3459D10095656A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5124C1E3459D10095656A /* TableViewCell.swift */; };
+		2CD5124F1E3459D10095656A /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD5124D1E3459D10095656A /* TableViewCell.xib */; };
 		877CA7471E33DF1900E14DA9 /* GraphViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877CA7461E33DF1900E14DA9 /* GraphViewViewController.swift */; };
-		877CA7621E33E2D600E14DA9 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877CA75D1E33E2AB00E14DA9 /* Charts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,27 +41,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2C1070B61E32FFA0006CD7FE;
 			remoteInfo = Innata;
-		};
-		877CA75C1E33E2AB00E14DA9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 877CA7561E33E2AA00E14DA9 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 06165F241D8110E600722320;
-			remoteInfo = Charts;
-		};
-		877CA75E1E33E2AB00E14DA9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 877CA7561E33E2AA00E14DA9 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 06B120D51D811E6200D14B02;
-			remoteInfo = ChartsRealm;
-		};
-		877CA7601E33E2AB00E14DA9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 877CA7561E33E2AA00E14DA9 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 06165F2E1D8110E600722320;
-			remoteInfo = ChartsTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -85,8 +66,10 @@
 		2C9B5B031E3315D700D7F659 /* ViewOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewOne.xib; sourceTree = "<group>"; };
 		2C9B5B061E331ABF00D7F659 /* ViewTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTwo.swift; sourceTree = "<group>"; };
 		2C9B5B071E331ABF00D7F659 /* ViewTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewTwo.xib; sourceTree = "<group>"; };
+		2CD5121A1E340C8C0095656A /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		2CD5124C1E3459D10095656A /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		2CD5124D1E3459D10095656A /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		877CA7461E33DF1900E14DA9 /* GraphViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewViewController.swift; sourceTree = "<group>"; };
-		877CA7561E33E2AA00E14DA9 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				877CA7621E33E2D600E14DA9 /* Charts.framework in Frameworks */,
 				2C1070EE1E330102006CD7FE /* CoreImage.framework in Frameworks */,
 				2C1070F31E330286006CD7FE /* TesseractOCR.framework in Frameworks */,
 				2C1070EC1E3300F6006CD7FE /* libstdc++.tbd in Frameworks */,
@@ -121,7 +103,6 @@
 		2C1070AE1E32FFA0006CD7FE = {
 			isa = PBXGroup;
 			children = (
-				877CA7561E33E2AA00E14DA9 /* Charts.xcodeproj */,
 				2C1070B91E32FFA0006CD7FE /* Innata */,
 				2C1070CE1E32FFA0006CD7FE /* InnataTests */,
 				2C1070D91E32FFA0006CD7FE /* InnataUITests */,
@@ -143,10 +124,13 @@
 		2C1070B91E32FFA0006CD7FE /* Innata */ = {
 			isa = PBXGroup;
 			children = (
+				2CD5121A1E340C8C0095656A /* tessdata */,
 				2C1070BA1E32FFA0006CD7FE /* AppDelegate.swift */,
 				2C1070EF1E330217006CD7FE /* Innata-Bridging-Header.h */,
 				2C1070BC1E32FFA0006CD7FE /* ViewController.swift */,
 				2C9B5B021E3315D700D7F659 /* ViewOne.swift */,
+				2CD5124C1E3459D10095656A /* TableViewCell.swift */,
+				2CD5124D1E3459D10095656A /* TableViewCell.xib */,
 				877CA7461E33DF1900E14DA9 /* GraphViewViewController.swift */,
 				2C9B5B031E3315D700D7F659 /* ViewOne.xib */,
 				2C1070BE1E32FFA0006CD7FE /* Main.storyboard */,
@@ -193,16 +177,6 @@
 			children = (
 			);
 			name = images;
-			sourceTree = "<group>";
-		};
-		877CA7571E33E2AA00E14DA9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				877CA75D1E33E2AB00E14DA9 /* Charts.framework */,
-				877CA75F1E33E2AB00E14DA9 /* ChartsRealm.framework */,
-				877CA7611E33E2AB00E14DA9 /* ChartsTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +247,7 @@
 				TargetAttributes = {
 					2C1070B61E32FFA0006CD7FE = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = WD6FRG4V7Z;
+						DevelopmentTeam = ZDXRK6UNH5;
 						ProvisioningStyle = Automatic;
 					};
 					2C1070CA1E32FFA0006CD7FE = {
@@ -299,12 +273,6 @@
 			mainGroup = 2C1070AE1E32FFA0006CD7FE;
 			productRefGroup = 2C1070B81E32FFA0006CD7FE /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 877CA7571E33E2AA00E14DA9 /* Products */;
-					ProjectRef = 877CA7561E33E2AA00E14DA9 /* Charts.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				2C1070B61E32FFA0006CD7FE /* Innata */,
@@ -314,30 +282,6 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		877CA75D1E33E2AB00E14DA9 /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 877CA75C1E33E2AB00E14DA9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		877CA75F1E33E2AB00E14DA9 /* ChartsRealm.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ChartsRealm.framework;
-			remoteRef = 877CA75E1E33E2AB00E14DA9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		877CA7611E33E2AB00E14DA9 /* ChartsTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ChartsTests.xctest;
-			remoteRef = 877CA7601E33E2AB00E14DA9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		2C1070B51E32FFA0006CD7FE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -345,9 +289,11 @@
 			files = (
 				2C1070C51E32FFA0006CD7FE /* LaunchScreen.storyboard in Resources */,
 				2C9B5B051E3315D700D7F659 /* ViewOne.xib in Resources */,
+				2CD5124F1E3459D10095656A /* TableViewCell.xib in Resources */,
 				2C9B5B091E331ABF00D7F659 /* ViewTwo.xib in Resources */,
 				2C1070C21E32FFA0006CD7FE /* Assets.xcassets in Resources */,
 				2C1070C01E32FFA0006CD7FE /* Main.storyboard in Resources */,
+				2CD5121B1E340C8C0095656A /* tessdata in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +321,7 @@
 				2C9B5B041E3315D700D7F659 /* ViewOne.swift in Sources */,
 				2C9B5B081E331ABF00D7F659 /* ViewTwo.swift in Sources */,
 				877CA7471E33DF1900E14DA9 /* GraphViewViewController.swift in Sources */,
+				2CD5124E1E3459D10095656A /* TableViewCell.swift in Sources */,
 				2C1070BD1E32FFA0006CD7FE /* ViewController.swift in Sources */,
 				2C1070BB1E32FFA0006CD7FE /* AppDelegate.swift in Sources */,
 			);
@@ -529,7 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "compiler-default";
-				DEVELOPMENT_TEAM = WD6FRG4V7Z;
+				DEVELOPMENT_TEAM = ZDXRK6UNH5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/**",
@@ -552,7 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "compiler-default";
-				DEVELOPMENT_TEAM = WD6FRG4V7Z;
+				DEVELOPMENT_TEAM = ZDXRK6UNH5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/**",

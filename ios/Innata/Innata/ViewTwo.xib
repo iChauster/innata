@@ -5,13 +5,15 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewTwo" customModule="Innata" customModuleProvider="target">
             <connections>
+                <outlet property="active" destination="UTD-Db-CB5" id="icD-Zw-p7x"/>
                 <outlet property="cam" destination="ghp-29-CRb" id="bhq-4N-X1T"/>
+                <outlet property="imgv" destination="BbO-uj-uIn" id="YSJ-rf-cTq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,17 +22,41 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BbO-uj-uIn">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghp-29-CRb">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yev-1d-MlU">
+                    <rect key="frame" x="82" y="307" width="211" height="53"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="0.43993471746575341" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="53" id="MYm-G4-Ydf"/>
+                        <constraint firstAttribute="width" constant="211" id="rHS-HS-PcE"/>
+                    </constraints>
+                </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="UTD-Db-CB5">
+                    <rect key="frame" x="177" y="625" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ghp-29-CRb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="260-wz-LRQ"/>
+                <constraint firstAttribute="bottom" secondItem="BbO-uj-uIn" secondAttribute="bottom" id="57v-9G-GYm"/>
                 <constraint firstAttribute="bottom" secondItem="ghp-29-CRb" secondAttribute="bottom" id="70A-vE-67v"/>
+                <constraint firstItem="BbO-uj-uIn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="96c-Es-nbR"/>
+                <constraint firstItem="UTD-Db-CB5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JKF-qf-oyC"/>
+                <constraint firstItem="Yev-1d-MlU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ZOt-Tc-cdd"/>
+                <constraint firstItem="BbO-uj-uIn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZQa-Ox-Bu7"/>
+                <constraint firstAttribute="bottom" secondItem="UTD-Db-CB5" secondAttribute="bottom" constant="22" id="cjz-si-Iom"/>
                 <constraint firstAttribute="trailing" secondItem="ghp-29-CRb" secondAttribute="trailing" id="hdP-13-Plt"/>
+                <constraint firstItem="BbO-uj-uIn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lSQ-4h-FIO"/>
+                <constraint firstItem="Yev-1d-MlU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mXT-1h-rZN"/>
                 <constraint firstItem="ghp-29-CRb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="o6q-JZ-rON"/>
+                <constraint firstAttribute="trailing" secondItem="BbO-uj-uIn" secondAttribute="trailing" id="o8R-mK-tRc"/>
+                <constraint firstItem="BbO-uj-uIn" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="skd-k3-c0O"/>
             </constraints>
             <point key="canvasLocation" x="35.5" y="54.5"/>
         </view>

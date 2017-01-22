@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        UserDefaults.standard.set("5883ecd91756fc834d8ebeaf", forKey: "account")
         // Override point for customization after application launch.
         return true
     }

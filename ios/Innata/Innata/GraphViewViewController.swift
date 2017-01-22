@@ -5,11 +5,11 @@
 //  Created by Kyle Li on 1/21/17.
 //  Copyright © 2017 Innata. All rights reserved.
 //
-
+/*
 import UIKit
 import Charts
 
-class GraphViewViewController: UIViewController, ChartViewDelegate {
+class GraphViewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,4 +34,4 @@ class GraphViewViewController: UIViewController, ChartViewDelegate {
     }
     */
 
-}
+}*/
