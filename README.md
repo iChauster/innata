@@ -3,8 +3,8 @@
 rethink finance
 
 ## screnshots
-<img src = "/screenshots/Simulator Screen Shot Jan 21, 2017, 9.47.12 PM.png" width="258px">
-<img src = "/screenshots/Simulator Screen Shot Jan 28, 2017, 4.21.21 PM.png" width = "258px">
+<img src = "/screenshots/Simulator Screen Shot Jan 21, 2017, 9.47.12 PM.png" width="428px">
+<img src = "/screenshots/Simulator Screen Shot Jan 28, 2017, 4.21.21 PM.png" width = "427px">
 
 An app to keep you on track using receipt scanners, and spending heat maps and graphs.
 
